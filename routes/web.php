@@ -11,7 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('home', function () {
+    return view('home');
 });
 
+Route::get('create_account', function () {
+    return view('create_account');
+});
+
+Route::get('login', function () {
+    return view('login');
+});
+
+Route::get('profile', function () {
+    return view('profile');
+});
+
+Route::get('reset_password', function () {
+    return view('reset_password');
+});
+
+Route::get('view_story', function () {
+    return view('view_story');
+});
+
+Route::get('/', function () {
+    return view('splash');
+});
