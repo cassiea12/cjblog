@@ -29,7 +29,7 @@ Route::get('profile', function () {
 
 Route::get('reset_password', function () {
     return view('reset_password');
-});
+})->name('password.reset');
 
 Route::get('view_story', function () {
     return view('view_story');
