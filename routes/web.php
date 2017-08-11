@@ -38,5 +38,3 @@ Route::get('view_story', function () {
 Route::get('/', function () {
     return view('splash');
 });
-
-Route::get('/home', 'HomeController@index')->name('home');
