@@ -17,7 +17,7 @@ Route::get('home', function () {
 
 Route::get('create_account', function () {
     return view('create_account');
-});
+})->name('create.account');
 
 Route::get('login', function () {
     return view('login');
