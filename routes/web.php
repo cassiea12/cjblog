@@ -21,7 +21,7 @@ Route::get('create_account', function () {
 
 Route::get('login', function () {
     return view('login');
-});
+})->name('login');
 
 Route::get('profile', function () {
     return view('profile');
@@ -38,3 +38,5 @@ Route::get('view_story', function () {
 Route::get('/', function () {
     return view('splash');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
