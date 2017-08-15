@@ -15,6 +15,9 @@ Route::get('home', function () {
     return view('home');
 });
 
+
+
+
 Route::get('create_account', function () {
     return view('create_account');
 })->name('create.account');
@@ -27,9 +30,15 @@ Route::get('profile', function () {
     return view('profile');
 });
 
-Route::get('reset_password', function () {
+
+
+
+/*Route::get('reset_password', function () {
     return view('reset_password');
-})->name('password.reset');
+})->name('password.reset');*/
+
+Route::get('reset_password', 'ResetPasswordController@index')->name('password.reset');
+
 
 Route::get('view_story', function () {
     return view('view_story');
@@ -38,3 +47,5 @@ Route::get('view_story', function () {
 Route::get('/', function () {
     return view('splash');
 });
+
+
