@@ -22,9 +22,12 @@ Route::get('create_account', function () {
     return view('create_account');
 })->name('create.account');
 
+// Routes pertaining to Login Page
 Route::get('login', function () {
     return view('login');
 })->name('login');
+
+Route::post('login', 'Auth\LoginController@login')->name('login');
 
 Route::get('profile', function () {
     return view('profile');
