@@ -14,8 +14,6 @@
 Route::get('home', 'HomeController@index');
 
 
-
-
 Route::get('create_account', function () {
     return view('create_account');
 })->name('create.account');
