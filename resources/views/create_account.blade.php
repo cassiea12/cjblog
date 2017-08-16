@@ -2,6 +2,8 @@
 
 @section('content')
 
+    <h1>Create Account</h1>
+
     <form class="form-horizontal" method="POST" action="{{ route('create.account') }}">
         {{ csrf_field() }}
 
