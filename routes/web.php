@@ -20,9 +20,7 @@ Route::post('create_account', 'Auth\RegisterController@register');
 
 
 /*****************************************Login***********************************************/
-Route::get('login', function () {
-    return view('login');
-})->name('login');
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 
 Route::post('login', 'Auth\LoginController@login')->name('login');
 
