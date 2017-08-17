@@ -16,7 +16,7 @@ Route::get('home', 'HomeController@index');
 /***********************************Account Creation*******************************************/
 Route::get('create_account', 'Auth\RegisterController@showRegistrationForm')->name('create.account');
 
-Route::post('create_account', 'Auth\RegisterController@register');
+Route::post('create_account', 'Auth\RegisterController@register')->name('create.account');
 
 
 /*****************************************Login***********************************************/
