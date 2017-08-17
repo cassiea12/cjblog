@@ -35,7 +35,11 @@ Route::get('profile', function () {
     return view('reset_password');
 })->name('password.reset');*/
 
-Route::get('reset_password', 'ResetPasswordController@index')->name('password.reset');
+Route::get('reset/send_email', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('reset.send.email');
+
+/*Route::get('showResetPage' , function(){
+    return view('auth.passwords.reset');
+});*/
 
 
 Route::get('view_story', function () {
