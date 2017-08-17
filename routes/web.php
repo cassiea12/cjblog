@@ -11,25 +11,32 @@
 |
 */
 
-Route::get('home', function () {
-    return view('home');
-});
+Route::get('home', 'HomeController@index');
 
-Route::get('create_account', function () {
-    return view('create_account');
-});
+/***********************************Account Creation*******************************************/
+Route::get('create_account', 'Auth\RegisterController@showRegistrationForm')->name('create.account');
 
-Route::get('login', function () {
-    return view('login');
-});
+Route::post('create_account', 'Auth\RegisterController@register')->name('create.account');
+
+
+/*****************************************Login***********************************************/
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+
+Route::post('login', 'Auth\LoginController@login')->name('login');
+
+/********************************************************************************************/
 
 Route::get('profile', function () {
     return view('profile');
 });
 
-Route::get('reset_password', function () {
+
+/*Route::get('reset_password', function () {
     return view('reset_password');
-});
+})->name('password.reset');*/
+
+Route::get('reset_password', 'ResetPasswordController@index')->name('password.reset');
+
 
 Route::get('view_story', function () {
     return view('view_story');
@@ -38,3 +45,5 @@ Route::get('view_story', function () {
 Route::get('/', function () {
     return view('splash');
 });
+
+
