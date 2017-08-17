@@ -13,23 +13,24 @@
 
 Route::get('home', 'HomeController@index');
 
+/***********************************Account Creation*******************************************/
+Route::get('create_account', 'Auth\RegisterController@showRegistrationForm')->name('create.account');
 
-Route::get('create_account', function () {
-    return view('create_account');
-})->name('create.account');
+Route::post('create_account', 'Auth\RegisterController@register');
 
-// Routes pertaining to Login Page
+
+/*****************************************Login***********************************************/
 Route::get('login', function () {
     return view('login');
 })->name('login');
 
 Route::post('login', 'Auth\LoginController@login')->name('login');
 
+/********************************************************************************************/
+
 Route::get('profile', function () {
     return view('profile');
 });
-
-
 
 
 /*Route::get('reset_password', function () {
