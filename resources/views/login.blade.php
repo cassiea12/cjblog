@@ -50,7 +50,7 @@
                     Login
                 </button>
 
-                <a class="btn btn-link" href="{{ route('password.reset') }}">
+                <a class="btn btn-link" href="{{ route('reset.send.email') }}">
                     Forgot Your Password?
                 </a>
                 <a class="btn btn-link" href="{{ route('create.account') }}">
