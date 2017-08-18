@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CJ Blog</title>
     <!--- CSS -->
-    <link href="css/app.css" rel="stylesheet">
-
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
 
