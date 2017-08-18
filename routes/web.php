@@ -13,37 +13,33 @@
 
 Route::get('home', 'HomeController@index');
 
+Route::get('/', function () {
+    return view('splash');
+});
+
+Route::get('view_story', function () {
+    return view('view_story');
+});
+
+Route::get('profile', function () {
+    return view('profile');
+});
+
 /***********************************Account Creation*******************************************/
 Route::get('create_account', 'Auth\RegisterController@showRegistrationForm')->name('create.account');
 
 Route::post('create_account', 'Auth\RegisterController@register')->name('create.account');
-
 
 /*****************************************Login***********************************************/
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 
 Route::post('login', 'Auth\LoginController@login')->name('login');
 
-/********************************************************************************************/
+/*****************************************Reset Password****************************************************/
+/*****Not Fully Functional: Sends Emails, does not redirect back to website from a users email account*******/
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@reset')->name('password.reset');
 
-Route::get('profile', function () {
-    return view('profile');
-});
-
-
-/*Route::get('reset_password', function () {
-    return view('reset_password');
-})->name('password.reset');*/
-
-Route::get('reset_password', 'ResetPasswordController@index')->name('password.reset');
-
-
-Route::get('view_story', function () {
-    return view('view_story');
-});
-
-Route::get('/', function () {
-    return view('splash');
-});
 
 
