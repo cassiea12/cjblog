@@ -19,8 +19,9 @@ class ForgotPasswordController extends Controller
     */
 
     use SendsPasswordResetEmails;
+
     public function showLinkRequestForm()
-    {//return view('reset_password');
+    {
         return view('reset_password');
     }
 
